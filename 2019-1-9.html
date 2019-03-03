@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2019/1/9</title>
+</head>
+<body>
+    <!--
+    1.JavaScript中如何检测一个变量是一个String类型？
+    typeof (obj) === 'string'
+    typeof obj === 'string'
+    obj.constructor === String
+    -->
+
+    <!--
+    2.去除字符串的空格
+    2.1 使用replace正则匹配可以成功去除所有空格
+        var str = 'hello world'
+        var str2 = str.replace(/\s*/g,'')
+        console.log(str2)
+
+    2.2 str.trim()局限性，无法去除中间的空格
+        var str = ' hello world '
+        var str2 = str.trim()
+        console.log(str2)
+
+    2.3 $.trim(str)的局限性，无法去除中间的空格
+    var str = ' hello world  '
+    var str2 = $.trim(str)
+    console.log(str2)
+    -->
+    <!--3.如何获取浏览器URL中查询字符串的参数？
+
+    <script>
+    function showWindowHref(){
+    var sHref = window.location.href;
+    var args = sHref.split('?')
+    if(args[0] == sHref){
+    return ''
+    }
+    var arg = args[1].split('&')
+    var obj = {}
+    for(var i = 0;i < arg.length;i ++){
+    var arg = arg[i].split('=')
+    obj[arg[0]] = arg[1]
+    }
+    return obj
+    }
+    var href = showWindowHref()
+    console.log(href['name'])
+
+    </script>
+    -->
+
+    <!--
+    4.apply 和 call() 的区别？
+    JavaScript中的每一个Function对象中都有 apply() 方法和 call() 方法；
+    它们有各自的定义：
+    apply：调用一个对象的一个方法，用另一个对象替换当前对象。B.apply(A,arguments),即A对象调用B对象的方法
+    call：调用一个对象的一个方法，用另一个对象替换当前对象。B.call(A,args1,args2...),即A对象调用B对象的方法
+    实际上：apply 和 call 的功能是一样的，知识传入的参数列表不同。
+    4.1 基本用法
+    function add(a,b) {
+    return a + b;
+    }
+    function sub(a,b) {
+    return a - b;
+    }
+    var a1 = add.apply(sub,[4,2])
+    var a2 = sub.apply(add,[4,2])
+    alert(a1) //6
+    alert(a2) //2
+
+    var a1 = add.call(sub,4,2) //6
+    var a2 = sub.call(add,4,2) //2
+    4.2实现继承
+    function Animal(name){
+    this.name = name;
+    this.showName = function(){
+        alert(this.name);
+        //console.log(this.name);
+        }
+    }
+
+    function Cat(name){
+        Animal.apply(this,[name]);
+    }
+
+    var cat = new Cat("咕咕");
+    cat.showName();
+    //call 的用法
+    Animal.call(this,name)
+
+    4.3 多重继承
+    function Class1() {
+        this.showSub = function(a,b) {
+        alert(a - b)
+        }
+    }
+    function Class2() {
+    this.showAdd = function(a,b) {
+        alert(a + b)
+        }
+    }
+    function Class3() {
+        Class1.apply(this)
+        Class2.apply(this)
+        //Class1.call(this)
+        //Class2.call(this)
+    }
+    var a1 = new Class3()
+    a1.showSub(4,2)//2
+    a1.showAdd(4,2)//6
+
+    4.4 apply() / call() 求数组最值？
+    var arr = [2,3,4,44,32,46]
+    var max = Math.max.apply(this,number)
+    console.log(max) //46
+    ----------------
+     var arr = [2,3,4,44,32,46]
+    var max = Math.min.call(this,2,3,4,44,32,46)
+    console.log(min) //2
+
+    4.5 实现两个数组的合并
+    push没有提供push一个数组，但是它提供了push(param1,param2...),同样可以用
+    apply来转换一下这个数组：
+    var arr1 = new Array('1','2','3')
+    var arr2 = new Array('4','5','6')
+    Array.prototype.push.apply(arr1,arr2)
+    -->
+
+
+
+</body>
+</html>
