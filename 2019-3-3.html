@@ -26,8 +26,36 @@
         }
     -->
 
+        <!--
+
+        请描述一下cookies、sessionStorage和localStorage的区别？
+        1.存储大小：
+            cookie数据大小不能超过4K
+            sessionstorage和localstorage也有存储大小的限制，但是比cookie打得多，可以
+            达到5M或更大
+        2.有效时间：
+            cookie设置的cookie过期时间之前一直有效，计实窗口或者浏览器关闭
+            sessionStorage数据在当前浏览器关闭后自动删除
+            localStorage存储持久数据，浏览器关闭后数据不丢失，除非主动删除数据
+        3.数据与服务器之间的交互方式
+            cookie的数据会自动的传递到服务器，服务器端也可以写到cookie到客户端
+            sessionstorage和localstorage不会自动的把数据发给服务器，仅在本地保存
+
+补充：cookie存储在客户端，只是请求服务器的时候，也会将cookie信息发送到服务器端而已
+     cookie的信息会传递到服务器端，服务器处理cookie冰返回到客户端，cookie的信息是往返客户端和服务器端的。
+
+        -->
+
+        <!--
 
 
+
+        行内元素：a、b、span、img、input、em、strong、buttom、textarea
+        块级元素：div、ul、li、dl、dt、dd、p、h1-h6
+        空元素：br、meta、hr、link、input、img
+
+
+        -->
 
 </body>
 </html>
