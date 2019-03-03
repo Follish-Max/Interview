@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attr&prop</title>
+</head>
+<body>
+<!--
+    单行文本溢出处理：
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+    js事件流：
+    window->document->body->div->(text)。。。（text）->div->body->document->window
+    事件流分为三个阶段：事件捕获过程 、 事件触发过程、 冒泡过程
+
+    对于HTML元素本身就带有的固有属性（href、id），在处理时，使用prop
+    对于HTML元素我们自定义的DOM属性（action），在处理时，使用attr
+    具有true，false两个属性使用prop（checked，selected，disabled）
+
+-->
+
+    <!--
+
+    iframe优点：
+    1.iframe能原封不动的把嵌入的网页展现出来
+    2.如果多个网页调用iframe，只需修改iframe的内容就可以实现调用对iframe的每一个页面内容的更改，方便快捷
+    3.增加代码的可重用行。
+    iframe缺点：
+    1.会产生多个页面，不容易管理
+    2.很多移动设备不能完全显示框架，设备兼容性差
+    3.iframe会增加服务器的http请求，对于大型网站是不可取的
+
+    目前基本上都死用AJAX代替iframe，iframe已经渐渐退出了前端开发
+
+    -->
+</body>
+</html>
