@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2019-3-4</title>
+</head>
+<body>
+<!--
+
+示例1 使用DOM创建添加节点
+<script>
+    console.time("DOM");
+    for (var i = 0;i <100; i++) {
+        var div = document.createElement("div");
+        div.innerHTML = "hello" + i ;
+        document.body.appendChild(div);
+    }
+    console.timeEnd("DOM");
+</script>
+
+-->
+<!--
+
+
+<script>
+    console.time("Fragment");
+    var fragment = document.createDocumentFragment();
+    for(var i = 0;i < 100; i++) {
+        var div = document.createElement("div");
+        div.innerHTML = "hello world" + i;
+        fragment.appendChild(div);
+    }
+    document.body.appendChild(fragment);
+    console.timeEnd("Fragment");
+</script>
+    Fragment操作耗时比DOM操作耗时短
+-->
+
+
+<!--
+知识点：
+
+1.createElement（）
+    根据标签名创建一个具体的元素，对应的属性为innerHTML，此方法使用的频率高，
+    创建元素基本都是选择这个方法。
+
+2.createTextNode（）
+    创建一个文本节点对应的属性为innerText
+
+3.移除元素
+    parentNode.removeChild(childNode)
+
+4.替换元素
+    parentNode.replaceChild(newChild,oldChile);
+
+5.插入元素
+    parentNode.insertBefore(newChild,refChild);//在refChild前插入节点
+
+6.追加元素
+    perentNode.appendChild(childNode)
+
+7.查找
+    （1） parentNode.getElementsByTagName(tagName)//获取父节点下指定标签名节点
+
+    （2） document.getElementsByClass(className)
+
+     (3) document.getElementById(id)
+
+     (4) 高级选择器
+        document.querySelector("p") //选择P标签元素
+
+        document.querySelector(".wrapper") //选择类名为wrapper
+
+        document.querySelector("#dic") //选择id为div的元素
+
+        document.querySelector("a[target]") //选择a标签有target属性元素
+
+
+-->
+
+
+</body>
+</html>

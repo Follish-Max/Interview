@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优化兼容</title>
+</head>
+<body>
+<!--
+
+如何对网站的文件和资源进行优化？
+    文件合并、文件压缩、使用cdn（内容分发网络）托管资源、使用缓存、优化meta标签
+    压缩css/js文件
+    将css/js文件放在外部文件中，避免写在统一页面中，引用css将其放在最上面
+    js放在最下面引入。
+
+
+
+常见浏览器兼容问题：
+    1.不同浏览器的标签默认margin和padding不同；
+    2.图片之间默认有间距
+    3.边距重叠问题，当相邻两个元素都设置了margin边距时，margin将取最大值，舍弃最小值
+    4.IE9以下版本浏览器不支持opacity
+    5.IE6双边距问题，在IE6中设置了float，同时有设置了marin就会出现双边距，
+    如果设置float：left那么左边边距变成原来margin的两倍，float：right，右边
+    margin变为原来两倍。
+    解决办法：_display：inline；
+    IE7及以上，双边距bug已经修正，前缀符号“_”zhiyou IE6能识别。
+
+
+    6.被点击过后的超链接不再具有hover和active属性       
+     解决办法:按lvha的顺序书写css样式，
+     ":link": a标签还未被访问的状态；
+     ":visited": a标签已被访问过的状态；
+     ":hover": 鼠标悬停在a标签上的状态；
+     ":active": a标签被鼠标按着时的状态；
+
+    7.标准的事件绑定方法函数为addEventListener，但IE下是attachEvent
+
+
+
+
+-->
+</body>
+</html>
