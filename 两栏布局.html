@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    .container {
+        display: flex;
+    }
+    .left,
+    .right {
+        height: 200px;
+    }
+    .left {
+        background-color: green;
+        width: 200px;
+
+        flex-basis: 200px;
+
+        /*float: left;*/
+    }
+    .right {
+        background-color: orange;
+        border-left: 2px solid red;
+        /*margin-left: 200px;*/
+
+
+        /*overflow: hidden;*/
+
+
+        /*position: absolute;*/
+        /*left: 200px;*/
+        /*right: 0px;*/
+
+        flex: auto;
+    }
+
+
+</style>
+<body>
+
+
+<div class="container">
+    <div class="left">left</div>
+    <div class="right">right</div>
+</div>
+
+
+
+
+
+
+<!--
+    1.左侧float：lef，右侧margin-left；
+    
+    
+    2. 左侧float：left；右侧overflow：hidden；
+        overflow:hidden会触发BFC块级格式化上下文，
+        具有BFC特性的元素可以看作是一个隔离的独立容器，容易里面的元素在布局上不会影响外边元素，
+        并且BFC具有普通元素没有的特性：
+            （1）下边距不会发生重叠
+            （2） 可以清楚浮动
+            （3） 可以阻止元素被覆盖
+        所以，右边可以触发BFC清除左边浮动的影响
+
+
+        触发BFC的方法：
+        浮动元素（除了float：none）
+
+        定位的元素（absolute、fixed）
+
+        display（inline-block、table-cells、flex）
+
+        overflow（hidden、auto、scroll）
+
+    3.利用绝对定位
+
+-->
+</body>
+</html>
