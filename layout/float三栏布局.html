@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .left,
+        .right,
+        .center {
+            height: 100px;
+            background-color: green;
+        }
+        .left,
+        .right {
+            width: 300px;
+            background-color: red;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<!--左右使用float：left和float：right，使左右两个元素脱离文档流，center写在最后-->
+    <div class="layout">
+        <div class="left">box1</div>
+        <div class="right">box3</div>
+        <div class="center">box2</div>
+    </div>
+
+</body>
+</html>

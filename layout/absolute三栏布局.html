@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .left,
+        .right,
+        .center {
+            height: 100px;
+            background-color: yellow;
+        }
+        .left,
+        .right {
+            position: absolute;
+            width: 300px;
+            background-color: red;
+        }
+        .left {
+            left: 0px;
+        }
+        .right {
+            right: 0px;
+        }
+        .center {
+            margin: 0 300px;
+        }
+    </style>
+</head>
+<body>
+<!--绝对定位的原理就是左右两边使用absolute定位，使其脱离文档流，后面的center就会自然
+的流动到他们上面，然后设置center的margin属性，就可以使中间元素自适应屏幕宽度。-->
+<!--center放在最后，如果页面上还有其他内容，使用绝对定位-->
+<div class="layout">
+    <div class="left">box1</div>
+    <div class="right">box3</div>
+    <div class="center">box2</div>
+</div>
+
+</body>
+</html>
