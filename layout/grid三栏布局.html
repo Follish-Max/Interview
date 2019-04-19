@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--优点：简化代码量，实现更多效果
+    缺点：技术新，浏览器的支持率低-->
+<!--父级元素设置display：grid；
+设置grid-remplate-rows:100px-->
+<!--grid-template-columns:300px auto 300px-->
+<section class="layout grid">
+    <style>
+        .layout.grid .left-center-right {
+            display: grid;
+            grid-template-rows: 100px;
+            grid-template-columns: 300px auto 300px;
+        }
+        .left {
+            background: red;
+        }
+        .center {
+            background: green;
+        }
+        .right {
+            background: blue;
+        }
+    </style>
+    <article class="left-center-right">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </article>
+
+</section>
+</body>
+</html>

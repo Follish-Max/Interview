@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!-- 第一种布局：position -->
+<!--<section class="layout position">-->
+    <!--<style type="text/css">-->
+        <!--.layout.position div {-->
+            <!--width: 200px;-->
+        <!--}-->
+        <!--.layout.position .top{-->
+            <!--position: absolute;-->
+            <!--top: 0;-->
+            <!--height: 200px;-->
+            <!--background: #90D9F7;-->
+        <!--}-->
+        <!--.layout.position .middle{-->
+            <!--position: absolute;-->
+            <!--top: 200px;-->
+            <!--bottom: 200px;-->
+            <!--background: pink;-->
+        <!--}-->
+        <!--.layout.position .bottom{-->
+            <!--position: absolute;-->
+            <!--bottom: 0;-->
+            <!--height: 200px;-->
+            <!--background: #F5DE25;-->
+        <!--}-->
+        <!--.clear{ clear:both}-->
+    <!--</style>-->
+    <!--<article class="three_columns">-->
+        <!--<div class="top">上</div>-->
+        <!--<div class="middle">-->
+            <!--<h1>position布局</h1>-->
+        <!--</div>-->
+        <!--<div class="bottom">下</div>-->
+        <!--<div class="clear"></div>-->
+    <!--</article>-->
+
+<!--</section>-->
+
+<!--&lt;!&ndash; 第二种布局：flex &ndash;&gt;-->
+<!--<section class="layout flexbox">-->
+    <!--<style type="text/css">-->
+        <!--html,body {-->
+            <!--height: 100%;-->
+        <!--}-->
+        <!--.layout.flexbox{-->
+            <!--width: 200px;-->
+            <!--margin-left: 300px;-->
+            <!--height: 100%;-->
+        <!--}-->
+        <!--.layout.flexbox .three_columns{-->
+            <!--width: 200px;-->
+            <!--height: 100%;-->
+            <!--display: flex;-->
+            <!--flex-direction: column;-->
+        <!--}-->
+        <!--.layout.flexbox .top{-->
+            <!--height: 200px;-->
+            <!--background: #90D9F7;-->
+        <!--}-->
+        <!--.layout.flexbox .middle{-->
+            <!--flex: 1;-->
+            <!--background: pink;-->
+            <!--height: auto;-->
+        <!--}-->
+        <!--.layout.flexbox .bottom{-->
+            <!--height: 200px;-->
+            <!--background: #F5DE25;-->
+        <!--}-->
+    <!--</style>-->
+    <!--<article class="three_columns">-->
+        <!--<div class="top">上</div>-->
+        <!--<div class="middle">-->
+            <!--<h1>flexbox布局</h1>-->
+        <!--</div>-->
+        <!--<div class="bottom">下</div>-->
+
+    <!--</article>-->
+
+<!--</section>-->
+
+
+<!-- 第三种布局：table -->
+<section class="layout table">
+    <style type="text/css">
+        html,body {
+            height: 100%;
+        }
+        .layout.table{
+            width: 200px;
+            height: 100%;
+        }
+        .layout.table .three_columns{
+            width: 200px;
+            height: 100%;
+            display: table;
+        }
+        .layout.table .three_columns > div{
+            display: table-row;
+
+        }
+        .layout.table .top{
+            height: 200px;
+            background: #90D9F7;
+        }
+        .layout.table .middle{
+            background: pink;
+        }
+        .layout.table .bottom{
+            height: 200px;
+            background: #F5DE25;
+        }
+    </style>
+    <article class="three_columns">
+        <div class="top">上</div>
+        <div class="middle">
+            <h1>table布局</h1>
+        </div>
+        <div class="bottom">下</div>
+
+    </article>
+</section>
+
+
+<!-- 第四种布局：grid -->
+<section class="layout grid">
+    <style type="text/css">
+        .layout.grid{
+            margin-left: 20px;
+            height: 100%;
+        }
+        .layout.grid .three_columns{
+            width: 200px;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 200px auto 200px;
+            grid-template-columns: 200px;
+        }
+        .layout.grid .top{
+            height: 200px;
+            background: #90D9F7;
+        }
+        .layout.grid .middle{
+            background: pink;
+            overflow: auto;
+        }
+        .layout.grid .bottom{
+            height: 200px;
+            background: #F5DE25;
+        }
+    </style>
+    <article class="three_columns">
+        <div class="top">上</div>
+        <div class="middle">
+            <h1>grid布局</h1>
+        </div>
+        <div class="bottom">下</div>
+    </article>
+</section>
+</body>
+</html>

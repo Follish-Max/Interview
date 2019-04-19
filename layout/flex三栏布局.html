@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--优点：相对最优的方法，兼容性越来越好-->
+<!-- flexbox解决方案 ,center一定要放中间-->
+<section class="layout">
+    <style>
+        .layout .left-center-right {
+            height: 100px;
+            display: flex;
+        }
+        .layout .left {
+            width: 300px;
+            background-color: red;
+        }
+        .layout .right {
+            width: 300px;
+            background-color: green;
+        }
+        .layout .center {
+            background-color: blue;
+            flex: 1;
+        }
+    </style>
+    <artical class="left-center-right">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </artical>
+</section>
+
+
+<!-- 第三种布局：table -->
+<section class="layout table">
+    <style type="text/css">
+        .layout.table{
+            margin-left: 20px;
+            height: 100%;
+        }
+        .layout.table .three_columns{
+            width: 200px;
+            height: 100%;
+            display: table;
+        }
+        .layout.table .three_columns > div{
+            display: table-row;
+            vertical-align: middle;
+        }
+        .layout.table .top{
+            height: 200px;
+            background: #90D9F7;
+        }
+        .layout.table .middle{
+            background: pink;
+            overflow: auto;
+        }
+        .layout.table .bottom{
+            height: 200px;
+            background: #F5DE25;
+        }
+    </style>
+    <article class="three_columns">
+        <div class="top">上</div>
+        <div class="middle">
+            <h1>table布局</h1>
+        </div>
+        <div class="bottom">下</div>
+
+    </article>
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--优点：兼容好，兼容IE8
+    缺点：整个table是一个整体，在高度不确定的时候不合适-->
+<!--表格布局的结局方案
+1.父元素的width：100%，display：table
+2.所有的盒子div设置display：table-cell
+3.center位置不能随意放，只能放在中间
+-->
+<section class="layout table">
+    <style>
+        .layout.table .left-center-right {
+            width: 100%;
+            height: 100px;
+            display: table;
+        }
+        .layout.table div {
+            display: table-cell;
+        }
+        .layout.table .left {
+            width: 300px;
+            background-color: blue;
+        }
+        .layout.table .right {
+            width: 300px;
+            background-color: green;
+        }
+        .layout.table .center {
+            background-color: yellow;
+        }
+    </style>
+    <artical class="left-center-right">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </artical>
+</section>
+</body>
+</html>
